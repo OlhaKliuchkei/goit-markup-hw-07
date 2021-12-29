@@ -7,10 +7,7 @@
 }
 .header__logo {
   font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+  @include font(26px, 1.2, 0.03em, 700);
   color: var(--logo-black-color);
   text-decoration: none;
   margin-right: 93px;
@@ -30,10 +27,7 @@
 .nav-list__link {
   display: block;
   padding: 32px 0;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font(14px, 1.14, 0.02em, 500);
   color: var(--text-color);
   position: relative;
 }
@@ -62,22 +56,19 @@
 .header-contact__link {
   display: flex;
   align-items: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font(14px, 1.14, 0.02em, 500);
   color: var(--link-color);
   text-decoration: none;
-  &:hover,
-  &:focus {
+  &:hover .header-contact__icons,
+  &:focus .header-contact__icons {
     color: var(--accent-color);
-    .header-contact__icons,
-    .header-contact__icons {
-      fill: var(--accent-color);
-    }
   }
 }
 .header-contact__icons {
   fill: var(--link-color);
   margin-right: 10px;
+  .header-contact__link:hover &,
+  .header-contact__link:focus & {
+    fill: var(--accent-color);
+  }
 }

@@ -3,40 +3,32 @@
 }
 .projects__title {
   font-family: inherit;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
+  @include font(36px, 1.17, 0.03em, 700);
   color: var(--text-color);
   text-align: center;
   margin-bottom: 50px;
 }
 .projects-list {
-  display: flex;
-  justify-content: center;
+  @include flexjc-center;
 }
 .projects-list__item {
   &:not(:last-child) {
-  margin-right: 30px;
-}
+    margin-right: 30px;
+  }
 }
 .projects-list__wrap {
   position: relative;
 }
 .projects-list__imgtext {
+  @include flexjc-center;
+  align-items: center;
   position: absolute;
+  @include font(14px, 17, 0.03em, 700);
   height: 70px;
   bottom: 0;
   left: 0;
-  font-size: 14px;
-  line-height: 17;
-  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
   color: var(--white-color);
   background-color: rgba(47, 48, 58, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
 }

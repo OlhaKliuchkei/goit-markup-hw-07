@@ -1,16 +1,24 @@
-.about-list {
+@mixin flexjc-center {
   display: flex;
   justify-content: center;
+}
+@mixin font($fz, $lh, $ls, $fw) {
+  font-size: $fz;
+  line-height: $lh;
+  letter-spacing: $ls;
+  font-weight: $fw;
+}
+.about-list {
+  @include flexjc-center;
 }
 .about-list__item {
   width: 270px;
-}
-.about-list__item:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 .about-list__icon {
-  display: flex;
-  justify-content: center;
+  @include flexjc-center;
   align-items: center;
   width: 270px;
   height: 120px;
@@ -19,16 +27,11 @@
   margin-bottom: 30px;
 }
 .about-list__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font(14px, 1.14, 0.03em, 700);
   text-transform: uppercase;
   color: var(--text-color);
   margin-bottom: 10px;
 }
 .about-list__text {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include font(14px, 1.71, 0.03em);
 }

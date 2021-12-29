@@ -29,6 +29,8 @@
   pointer-events: none;
 }
 .modal-close {
+  @include flexjc-center;
+  align-items: center;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -37,9 +39,7 @@
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   cursor: pointer;
   &:hover,
   &:focus {
@@ -53,11 +53,8 @@
 .modal__title {
   font-family: Roboto;
   font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
+  @include font(20px, 23px, 0.03em, 700);
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--text-color);
   margin-bottom: 12px;
 }
@@ -70,9 +67,7 @@
   display: block;
   font-family: Roboto;
   font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
+  @include font(12px, 14px, 0.03em, 400);
   margin-bottom: 4px;
 }
 .modal-form__box {
@@ -88,9 +83,6 @@
   padding-left: 42px;
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:focus + .modal-form__icon {
-    fill: var(--accent-color);
-  }
   &:focus {
     border-color: var(--accent-color);
   }
@@ -101,6 +93,9 @@
   transform: translateY(-50%);
   left: 12px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .modal-form__input:focus & {
+    fill: var(--accent-color);
+  }
 }
 .modal-form__textarea {
   display: block;
@@ -134,24 +129,20 @@
   }
 }
 .modal-terms__text {
-  display: flex;
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: var(--link-color);
+  @include flexjc-center;
   align-items: center;
-  justify-content: center;
+  font-family: Roboto;
+  @include font(14px, 24px, 0.03em, 400);
+  color: var(--link-color);
+
   span {
     width: 16px;
     height: 15px;
     border: 2px solid var(--logo-black-color);
     margin-right: 8px;
     border-radius: 2px;
-    display: flex;
+    @include flexjc-center;
     align-items: center;
-    justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
@@ -166,14 +157,10 @@
 .modal-button {
   display: block;
   margin: 0 auto;
-
   font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
+  @include font(16px, 1.9, 0.06em, 700);
   text-align: center;
   padding: 10px;
-  letter-spacing: 0.06em;
   color: var(--white-color);
   min-width: 200px;
   background: var(--accent-color);

@@ -1,5 +1,7 @@
 .hero {
-  display: flex;
+  @include flexjc-center;
+  align-items: center;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
@@ -13,29 +15,20 @@
   background-color: var(--background-herofoot-color);
   height: 600px;
   max-width: 1600px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .hero__title {
   display: inline-block;
   margin-top: 0px;
   margin-bottom: 30px;
   width: 696px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
+  @include font(44px, 1.36, 0.06em, 900);
   text-transform: uppercase;
   text-align: center;
   color: var(--white-color);
 }
 .hero__button {
   font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
-  text-align: center;
+  @include font(16px, 1.9, 0.06em, 700);
   padding: 10px;
   letter-spacing: 0.06em;
   color: var(--white-color);
