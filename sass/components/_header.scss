@@ -1,11 +1,11 @@
 .header {
   border-bottom: 1px solid #ececec;
 }
-.container-header {
+.container__header {
   display: flex;
   align-items: center;
 }
-.header__logo {
+.logo {
   font-family: Raleway;
   @include font(26px, 1.2, 0.03em, 700);
   color: var(--logo-black-color);
@@ -64,7 +64,7 @@
     color: var(--accent-color);
   }
 }
-.header-contact__icons {
+.header-contact__icon {
   fill: var(--link-color);
   margin-right: 10px;
   .header-contact__link:hover &,

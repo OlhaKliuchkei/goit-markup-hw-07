@@ -1,7 +1,7 @@
-.projects {
+.section--no-padding-top {
   padding-top: 0;
 }
-.projects__title {
+.section__title {
   font-family: inherit;
   @include font(36px, 1.17, 0.03em, 700);
   color: var(--text-color);

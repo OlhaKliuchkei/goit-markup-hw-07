@@ -28,7 +28,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  @include font(18px, 28px, 0.03em);
+  @include font(18px, 28px, 0.03em, 400);
   color: var(--white-color);
   background-color: rgba(33, 150, 243, 0.9);
   height: 100%;
@@ -54,6 +54,6 @@
   margin-bottom: 4px;
 }
 .cardtext__text {
-  @include font(16px, 1.87, 0.03em);
+  @include font(16px, 1.87, 0.03em, 400);
   color: var(--link-color);
 }

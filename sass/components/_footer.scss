@@ -19,7 +19,7 @@
 }
 .footer-contacts__list {
   font-style: normal;
-  @include font(14px, 1.71, 0.03em);
+  @include font(14px, 1.71, 0.03em, 400);
   color: var(--white-color);
 }
 .footer-contacts__item {
@@ -30,13 +30,13 @@
 .footer-contacts__link {
   font-family: inherit;
   font-style: normal;
-  @include font(14px, 1.71, 0.03em);
+  @include font(14px, 1.71, 0.03em, 400);
   color: rgba(255, 255, 255, 0.6);
 }
 .footer-contacts__link--white {
   font-family: inherit;
   font-style: normal;
-  @include font(14px, 1.71, 0.03em);
+  @include font(14px, 1.71, 0.03em, 400);
   color: var(--white-color);
 }
 .footer-socials {
@@ -55,7 +55,7 @@
 .footer-socials__item {
   width: 44px;
   height: 44px;
-  }
+}
 .footer-socials__item {
   & + & {
     margin-left: 10px;
